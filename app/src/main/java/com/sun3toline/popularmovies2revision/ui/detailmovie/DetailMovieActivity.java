@@ -205,6 +205,7 @@ public class DetailMovieActivity extends AppCompatActivity implements DetailView
 
     @Override
     public void displayVideo(List<MovieVideo> videos) {
+        movieVideos.clear();
         movieVideos.addAll(videos);
         trailersAdapter.notifyDataSetChanged();
 
@@ -215,6 +216,7 @@ public class DetailMovieActivity extends AppCompatActivity implements DetailView
 
     @Override
     public void displayReview(List<Review> reviews) {
+        movieReview.clear();
         movieReview.addAll(reviews);
         reviewAdapter.notifyDataSetChanged();
         for (Review review : reviews) {
